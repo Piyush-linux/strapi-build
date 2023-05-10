@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "centres",
+  "info": {
+    "singularName": "centre",
+    "pluralName": "centres",
+    "displayName": "Centre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
+      "mappedBy": "centre"
+    },
+    "co_name": {
+      "type": "string"
+    },
+    "co_email": {
+      "type": "string"
+    },
+    "co_num": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}

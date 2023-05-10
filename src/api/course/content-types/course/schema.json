@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "about": {
+      "type": "text"
+    },
+    "eligibility": {
+      "type": "text"
+    },
+    "overview": {
+      "type": "text"
+    },
+    "centre": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::centre.centre",
+      "inversedBy": "courses"
+    },
+    "courseid": {
+      "type": "string"
+    },
+    "partner": {
+      "displayName": "Partner",
+      "type": "component",
+      "repeatable": false,
+      "component": "partner.partner"
+    },
+    "video": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "mode": {
+      "type": "enumeration",
+      "enum": [
+        "Online",
+        "Offline",
+        "Hybrid"
+      ]
+    }
+  }
+}
